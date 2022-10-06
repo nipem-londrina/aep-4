@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    background-color: #D9D9D9;
+}
+
+/* cabeçalho azul com o nome da página e o botão de menu*/
+header {
+    /* fica sempre no topo da página */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: #00043B;
+    color: white;
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+
+
+
+#menu-botao {
+    vertical-align: middle;
+    height: 1em;
+}
+
+/* menu */
+nav {
+    background-color: #00043B;
+    padding: 0.5em;
+    /* certifica-se de que o menu cobre toda a tela */
+    width: calc(100% - 1em);
+    height: calc(100% - 5em);
+    /* por padrão, o menu fica à esquerda, fora de vista */
+    position: fixed;
+    top: 4em;
+    left: calc(-1em - 100vw);
+    /* posição negativa */
+    transition: 0.5s;
+}
+
+nav .menu-lista {
+    list-style: none;
+    float: left;
+    padding: 0;
+}
+
+nav.menu-aberto {
+    /* se o menu for aberto, ele desliza para a direita*/
+    transition: 0.5s;
+    left: 0;
+}
+
+nav li {
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a.pagina-atual {
+    /* cor diferente para o item que descreve a página atual */
+    color: #9399FF;
+}
+
+#submenu {
+    border-style: solid none;
+    border-color: #00043B;
+    height: 5em;
+    overflow: hidden;
+}
+
+#submenu.submenu-aberto {
+    border-color: white;
+    height: auto;
+}
+
+#setinha {
+    margin-left: 1em;
+    height: 1em;
+    vertical-align: middle;
+    transition: 0.5s;
+}
+
+
+
+main {
+    background-color: white;
+    margin: 1em;
+    margin-top: 6em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+
+
+/* responsividade para computadores */
+/* a principal diferença é o menu */
+@media only screen and (min-width: 769px) {
+    nav {
+        width: 250px;
+    }
+
+    #main.menu-aberto {
+        margin-left: calc(250px + 2em);
+        transition: 0.5s;
+    }
+}
