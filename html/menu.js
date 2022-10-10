@@ -1,10 +1,9 @@
 function abrirMenu() {
-    document.getElementById('menu').classList.toggle('menu-aberto');
-    document.getElementById('main').classList.toggle('menu-aberto');
+    $('#menu').toggleClass('menu-aberto');
+    $('#main').toggleClass('menu-aberto');
 }
 
 function abrirSubMenu() {
-    document.getElementById('submenu').classList.toggle('submenu-aberto');
-    setinha = document.getElementById('setinha');
-    setinha.style.transform = setinha.style.transform == 'rotate(180deg)' ? '' : 'rotate(180deg)';
+    $('#submenu').toggleClass('submenu-aberto');
+    $('#setinha').css('transform', $('#setinha').css('transform') == 'none' ? 'rotate(180deg)' : '')
 }
