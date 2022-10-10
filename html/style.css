@@ -100,6 +100,31 @@ main {
     border-radius: 0.5em;
 }
 
+input {
+    width: calc(100% - 16px);
+    padding: 0.5em;
+    border-radius: 5px;
+    border-color: #CCC;
+    border-width: 2px;
+    border-style: solid;
+}
+
+button {
+    display: inline-block;
+    background-color: #00043B;
+    color: white;
+    border: none;
+    padding: 1em;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+button[type=submit] {
+    font-weight: bold;
+    width: 100%;
+    margin-top: 2em;
+}
+
 
 
 /* responsividade para computadores */

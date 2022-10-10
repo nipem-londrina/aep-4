@@ -1,0 +1,19 @@
+.campo {
+    display: inline-block;
+    width: calc(100% - 1em);
+    margin: 0.5em;
+}
+
+.campo.medio {
+    width: calc(60% - 1em);
+}
+
+.campo.pequeno {
+    margin-left: 20px;
+    width: calc(40% - 1em - 16px);
+}
+
+button.pequeno {
+    margin-left: 20px;
+    width: calc(40% - 24px);
+}
