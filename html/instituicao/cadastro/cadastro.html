@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/html/style.css">
+    <link rel="stylesheet" href="../cadastro/cadastro.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!-- jQuery Mask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+        integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Aplicar máscaras -->
+    <script>
+        $(document).ready(function () {
+            $('[name=telefone]').mask('(00) 90000-0000');
+            $('[name=cnpj]').mask('00.000.000/0000-00');
+        });
+    </script>
+</head>
+
+<body>
+    <div class="img-arvore"><img src="/html/instituicao/cadastro/images/arvore.png"></div>
+    <div class="img-salinha"><img src="/html/instituicao/cadastro/images/salinha.png"></div>
+    <div class="img-grupo-icons"><img src="/html/instituicao/cadastro/images/grupo-icons.png"></div>
+    <div class="img-icon-tela"><img src="/html/instituicao/cadastro/images/icon-tela.png"></div>
+    <div class="img-icon-balao"><img src="/html/instituicao/cadastro/images/icon-balao.png"></div>
+    <main id="main">
+        <h2 class="titulo">Solicitação de Acesso</h2>
+        <form class="form">
+            <div class="campo">
+                <label for="razaoSocial">Razão Social *</label>
+                <input type="text" name="razaoSocial" placeholder="Nome da instituição de ensino">
+            </div>
+            <div class="campo">
+                <label for="cnpj">CNPJ *</label>
+                <input type="text" name="cnpj" placeholder="__.___.___/____-__">
+            </div>
+            <div class="campo">
+                <label for="tipoInstituicao">Tipo de Instituição *</label>
+                <select class="campo-sel" type="text" name="tipoInstituicao" placeholder="">
+                    <option value>Selecione</option>
+                    <option value="1: PUBLICA">Publica</option>
+                    <option value="2: PRIVADA">Privada</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="nomeContato">Nome do Contato *</label>
+                <input type="text" name="nomeContato" placeholder="Nome Contato">
+            </div>
+            <div class="campo">
+                <label for="cargoContato">Cargo do Contato *</label>
+                <input type="text" name="cargoContato" placeholder="Cargo Contato">
+            </div>
+            <div class="campo medio">
+                <label for="telefone">Telefone *</label>
+                <input type="text" name="telefone" placeholder="(__) _____-____">
+            </div>
+            <div class="campo pequeno">
+                <label for="ramal">Ramal *</label>
+                <input type="text" name="ramal" placeholder="____">
+            </div>
+            <div class="campo">
+                <label for="email">E-mail *</label>
+                <input type="email" name="email" placeholder="E-mail de contato">
+            </div>
+            <div class="campo">
+                <label for="senha">Senha de Acesso *</label>
+                <input type="password" name="senha" placeholder="*****">
+            </div>
+            <div class="campo">
+                <label for="senha">Confirmar Senha *</label>
+                <input type="password" name="senha" placeholder="*****">
+            </div>
+            <div class="div-btn">
+            <button class="btn-confirmar" type="submit">CONFIRMAR</button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

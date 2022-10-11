@@ -1,0 +1,136 @@
+
+.titulo {
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 20px;
+    font-size: 28px;
+    line-height: 29px;
+    text-align: center;
+    color: #00043B;
+    margin-top: 2%;
+}
+
+body{
+    background-color: #fdfdfd;
+}
+.img-arvore{
+    position: absolute;
+    left: 78.4%;
+    right: 2.15%;
+    top: 550px;
+    bottom: 3.13%;
+}
+
+.img-salinha{
+    position: absolute;
+    height: 200px;
+    left: 46.46px;
+    top: 550px;
+
+}
+
+.img-grupo-icons{
+    position: absolute;
+    width: 196.58px;
+    height: 271.07px;
+    left: 110px;
+    top: 68px;
+
+
+}
+
+.img-icon-tela{
+    position: absolute;
+    left: 79.79%;
+    right: 2.9%;
+    top: 6.64%;
+    bottom: 68.78%;
+
+}
+
+.img-icon-balao{
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    bottom: 47.08%;
+    transform: rotate(14.09deg);
+}
+
+#main{
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 6px outset rgba(63, 63, 63, 0.199);    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-bottom: 50px;
+    transform: translateY(-50%) translateX(-50%)
+}
+
+.campo-sel{
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    width: calc(101% - 0.3em);
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border-radius: 4px;
+  
+}
+
+.campo {
+    display: inline-block;
+    width: calc(100% - 1em);
+    margin: 0.5em;
+}
+
+.campo.medio {
+    width: calc(60% - 1em);
+}
+
+.campo.pequeno {
+    margin-left: 20px;
+    width: calc(39.8% - 1em - 16px);
+}
+
+.btn-confirmar {
+  padding: 13px;
+  font-size: 13px;
+}
+
+.div-btn{
+    padding-left: 8px;
+    padding-right: 7.5px;
+}
+
+@media screen and (max-width:1300px) {
+
+    #main {
+        position: absolute;
+        margin: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: relative;
+        width: 100%;
+        padding-right: 0px;
+        padding-left: 0px;
+        border-right: 0px;
+        border-left: 0px;
+        transform: translateY(-50%) translateX(-50%);
+    }
+
+    .campo.pequeno {
+        margin-left: 20px;
+        width: calc(35% - 1em);
+    }
+
+    .img-arvore, .img-salinha,
+    .img-grupo-icons, .img-icon-balao,
+    .img-icon-tela {
+        display: none;
+    }
+
+
+}
