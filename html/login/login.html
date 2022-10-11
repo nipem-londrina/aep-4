@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="formulario.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <form class="login" method="POST" action="">
+            <h1>Login</h1>
+            <input type="email" name="email" id="email" placeholder="Email"><br><br>
+            <input type="password" name="senha" id="senha" placeholder="Senha"><br><br>
+            <button id="entra" onclick="$('#email,#senha').val('')">
+                ENTRAR
+            </button><br><br>
+            <a href="#"><em>Esqueceu a senha?</em></a>
+            <br><br>
+            <p>Vamos iniciar nossa parceria?</p>
+            <button id="cadastre" onclick="$('#email,#senha').val('')">
+                Cadastrar instituição de ensino?</button> </em>
+        </form>
+    </main>
+</body>
+
+</html>

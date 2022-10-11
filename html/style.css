@@ -1,3 +1,7 @@
+:root {
+    --azul: #00008B;
+}
+
 body {
     margin: 0;
     background-color: #D9D9D9;
@@ -11,7 +15,7 @@ header {
     left: 0;
     width: 100%;
 
-    background-color: #00043B;
+    background-color: var(--azul);
     color: white;
     font-size: 2em;
     padding: 0.5em;
@@ -27,7 +31,7 @@ header {
 
 /* menu */
 nav {
-    background-color: #00043B;
+    background-color: var(--azul);
     padding: 0.5em;
     /* certifica-se de que o menu cobre toda a tela */
     width: calc(100% - 1em);
@@ -73,7 +77,7 @@ nav a.pagina-atual {
 
 #submenu {
     border-style: solid none;
-    border-color: #00043B;
+    border-color: var(--azul);
     height: 5em;
     overflow: hidden;
 }
@@ -111,7 +115,7 @@ input {
 
 button {
     display: inline-block;
-    background-color: #00043B;
+    background-color: var(--azul);
     color: white;
     border: none;
     padding: 1em;
@@ -129,7 +133,7 @@ button[type=submit] {
 
 /* responsividade para computadores */
 /* a principal diferença é o menu */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 426px) {
     nav {
         width: 250px;
     }
