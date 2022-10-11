@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/html/style.css">
-    <link rel="stylesheet" href="../cadastro/cadastro.css">
+    <title>[TÍTULO]</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="cadastro.css">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -23,14 +24,14 @@
 </head>
 
 <body>
-    <div class="img-arvore"><img src="/html/instituicao/cadastro/images/arvore.png"></div>
-    <div class="img-salinha"><img src="/html/instituicao/cadastro/images/salinha.png"></div>
-    <div class="img-grupo-icons"><img src="/html/instituicao/cadastro/images/grupo-icons.png"></div>
-    <div class="img-icon-tela"><img src="/html/instituicao/cadastro/images/icon-tela.png"></div>
-    <div class="img-icon-balao"><img src="/html/instituicao/cadastro/images/icon-balao.png"></div>
-    <main id="main">
+    <img id="img-arvore" class="img-fundo" src="images/arvore.png">
+    <img id="img-salinha" class="img-fundo" src="images/salinha.png">
+    <img id="img-grupo-icons" class="img-fundo" src="images/grupo-icons.png">
+    <img id="img-icon-tela" class="img-fundo" src="images/icon-tela.png">
+    <img id="img-icon-balao" class="img-fundo" src="images/icon-balao.png">
+    <main>
         <h2 class="titulo">Solicitação de Acesso</h2>
-        <form class="form">
+        <form>
             <div class="campo">
                 <label for="razaoSocial">Razão Social *</label>
                 <input type="text" name="razaoSocial" placeholder="Nome da instituição de ensino">
@@ -43,8 +44,8 @@
                 <label for="tipoInstituicao">Tipo de Instituição *</label>
                 <select class="campo-sel" type="text" name="tipoInstituicao" placeholder="">
                     <option value>Selecione</option>
-                    <option value="1: PUBLICA">Publica</option>
-                    <option value="2: PRIVADA">Privada</option>
+                    <option value="1">Pública</option>
+                    <option value="2">Privada</option>
                 </select>
             </div>
             <div class="campo">
@@ -75,9 +76,7 @@
                 <label for="senha">Confirmar Senha *</label>
                 <input type="password" name="senha" placeholder="*****">
             </div>
-            <div class="div-btn">
-            <button class="btn-confirmar" type="submit">CONFIRMAR</button>
-            </div>
+            <button type="submit">CONFIRMAR</button>
         </form>
     </main>
 </body>

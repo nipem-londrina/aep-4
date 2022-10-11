@@ -1,5 +1,6 @@
 :root {
-    --azul: #00008B;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --azul: #00043B;
 }
 
 body {
@@ -113,6 +114,15 @@ input {
     border-style: solid;
 }
 
+select {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 5px;
+    border-color: #CCC;
+    border-width: 2px;
+    border-style: solid;
+}
+
 button {
     display: inline-block;
     background-color: var(--azul);
@@ -125,7 +135,8 @@ button {
 
 button[type=submit] {
     font-weight: bold;
-    width: 100%;
+    width: calc(100% - 16px);
+    margin: 0 8px;
     margin-top: 2em;
 }
 
