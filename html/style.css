@@ -1,5 +1,7 @@
+/* se aplica a todo o documento */
 :root {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* use var(--azul) quando quiser a cor azul primária */
     --azul: #00043B;
 }
 
@@ -41,7 +43,6 @@ nav {
     position: fixed;
     top: 4em;
     left: calc(-1em - 100vw);
-    /* posição negativa */
     transition: 0.5s;
 }
 
@@ -53,8 +54,8 @@ nav .menu-lista {
 
 nav.menu-aberto {
     /* se o menu for aberto, ele desliza para a direita*/
-    transition: 0.5s;
     left: 0;
+    transition: 0.5s;
 }
 
 nav li {
@@ -103,6 +104,17 @@ main {
     margin-top: 6em;
     padding: 1em;
     border-radius: 0.5em;
+    max-width: calc(100% - 4em);
+}
+
+.titulo {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 29px;
+    text-align: center;
+    color: var(--azul);
+    margin-top: 2%;
 }
 
 input {
@@ -128,16 +140,26 @@ button {
     background-color: var(--azul);
     color: white;
     border: none;
-    padding: 1em;
+    padding: 0.5em;
     font-size: 1em;
     border-radius: 5px;
+    width: calc(100% - 16px);
+    margin: 0 8px;
+    margin-top: 2em;
 }
 
 button[type=submit] {
     font-weight: bold;
-    width: calc(100% - 16px);
-    margin: 0 8px;
-    margin-top: 2em;
+    padding: 1em;
+}
+
+
+
+/* estilo para formulários */
+.campo {
+    display: inline-block;
+    width: calc(100% - 2em);
+    margin: 0.5em 1em;
 }
 
 
@@ -149,8 +171,23 @@ button[type=submit] {
         width: 250px;
     }
 
-    #main.menu-aberto {
-        margin-left: calc(250px + 2em);
-        transition: 0.5s;
+    main {
+        width: 768px;
+        margin: 6em auto 1em;
+    }
+
+
+    /* estilo para formulários */
+    .campo.medio {
+        width: calc(60% - 1em);
+    }
+
+    .campo.pequeno {
+        width: calc(40% - 2em - 21px);
+    }
+
+    button.pequeno {
+        margin: 0.5em 1em;
+        width: calc(40% - 2.5em - 13px);
     }
 }

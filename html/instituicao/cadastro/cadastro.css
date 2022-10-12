@@ -1,13 +1,3 @@
-.titulo {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 29px;
-    text-align: center;
-    color: var(--azul);
-    margin-top: 2%;
-}
-
 body {
     background-color: #fdfdfd;
 }
@@ -22,27 +12,7 @@ main {
     background-color: white;
 }
 
-.campo {
-    display: inline-block;
-    width: calc(100% - 1em);
-    margin: 0.5em;
-}
-
-.campo.medio {
-    width: calc(60% - 1em);
-}
-
-.campo.pequeno {
-    margin-left: 20px;
-    width: calc(35% - 1em);
-}
-
 @media only screen and (min-width: 426px) {
-
-    .campo.pequeno {
-        margin-left: 20px;
-        width: calc(39.8% - 1em - 16px);
-    }
 
     .img-fundo {
         display: block;
