@@ -96,6 +96,10 @@ nav a.pagina-atual {
     transition: 0.5s;
 }
 
+.invert {
+    filter: invert(1);
+}
+
 
 
 main {
