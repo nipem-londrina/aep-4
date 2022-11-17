@@ -11,7 +11,7 @@
 .mtj.tmp/
 
 # Package Files
-# *.jar
+*.jar
 *.war
 *.nar
 *.ear
@@ -21,6 +21,9 @@
 
 # Libs re-included
 !lib/
+
+# Apache Tomcat re-excluded
+lib/apache-tomcat-10.0.27/
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
@@ -40,5 +43,5 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 
-# Apache Tomcat
-lib/apache-tomcat-10.0.27
+# eu não consigo ignorar esse cara de jeito nenhum socorro
+nbproject/private/private.properties
