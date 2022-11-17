@@ -27,3 +27,7 @@ hs_err_pid*
 
 # Test folder
 test/
+
+# NetBeans
+/build/
+/lib/apache-tomcat-10.0.27
