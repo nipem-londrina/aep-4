@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -25,7 +25,7 @@
 
 <body>
     <header>
-        <img class="invert" src="/aep-4/images/icons/menu.png" alt="menu" id="menu-botao" onclick="abrirMenu();">
+        <img class="invert" src="/aep-4/assets/icons/menu.png" id="menu-botao" onclick="abrirMenu()">
         Nipem
     </header>
     <nav id='menu' class="">
@@ -34,7 +34,7 @@
             <li><a href="#">Coordenadores</a></li>
             <li><a href="#">Documentos</a></li>
             <ul id="submenu" class="menu-lista">
-                <li onclick="abrirSubMenu()"><a>submenu</a> <img id="setinha" class="invert" src="/aep-4/images/icons/expand.png"></li>
+                <li onclick="abrirSubMenu()"><a>submenu</a> <img id="setinha" class="invert" src="/aep-4/assets/icons/expand.png"></li>
                 <li><a href="#">subcoisa1</a></li>
                 <li><a href="#">subcoisa2</a></li>
                 <li><a href="#">subcoisa3</a></li>
@@ -42,38 +42,35 @@
             <li><a href="">sair</a></li>
         </ul>
     </nav>
-    <main id="main">
-        <h2 class="titulo">Cadastrar Novo Coordenador</h2>
-        <form class="form">
+    <main>
+        <h2 class="titulo">Perfil</h2>
+        <form action="">
             <div class="campo">
-                <label for="razaoSocial">Nome Completo *</label>
-                <input type="text" name="" placeholder="Nome Completo">
-            </div><br>
+                <label for="nomeContato">Nome Completo *</label>
+                <input type="text" name="" placeholder="" >
+            </div>
             <div class="campo">
-                <label for="nomeContato">Curso *</label>
-                <input type="text" name="" placeholder="Curso designado">
+                <label for="cargoContato">Curso *</label>
+                <input type="text" name="" placeholder="">
             </div>
             <div class="campo medio">
                 <label for="telefone">Telefone *</label>
-                <input type="telphone" name="telefone" placeholder="(__) _____-____">
+                <input type="text" name="telefone" placeholder="(__) _____-____">
             </div>
             <div class="campo pequeno">
-                <label for="ramal">Ramal</label>
-                <input type="number" name="" placeholder="____">
+                <label for="ramal">Ramal *</label>
+                <input type="number" name="ramal" placeholder="___">
             </div>
             <div class="campo">
                 <label for="email">E-mail *</label>
-                <input type="email" name="" placeholder="E-mail de contato">
+                <input type="email" name="email" placeholder="E-mail de contato">
             </div>
-            <div class="campo">
+            <div class="campo medio">
                 <label for="senha">Senha de Acesso *</label>
                 <input type="password" name="senha" placeholder="*****">
-            </div><br>
-            <div class="campo">
-                <label for="senha">Confirmar Senha *</label>
-                <input type="password" name="senha" placeholder="*****">
             </div>
-            <button class="btn-confirmar" type="submit">CONFIRMAR</button>
+            <button class="pequeno">ALTERAR SENHA</button>
+            <button type="submit">CONFIRMAR</button>
         </form>
     </main>
 </body>

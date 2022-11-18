@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nipem</title>
     <link rel="stylesheet" href="/aep-4/style.css">
-    <script src="/aep-4/menu.js"></script>
+    <link rel="stylesheet" href="bemvindo.css">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -24,27 +24,14 @@
 </head>
 
 <body>
-    <header>
-        <img class="invert" src="/aep-4/images/icons/menu.png" id="menu-botao" onclick="abrirMenu()">
-        Nipem
-    </header>
-    <nav id='menu' class="">
-        <ul class="menu-lista">
-            <li class="pagina-atual"><a href="#">coisa</a></li>
-            <li><a href="#">aaa</a></li>
-            <li><a href="#">e tal</a></li>
-            <ul id="submenu" class="menu-lista">
-                <li onclick="abrirSubMenu()"><a>submenu</a> <img id="setinha" class="invert" src="/aep-4/images/icons/expand.png"></li>
-                <li><a href="#">subcoisa1</a></li>
-                <li><a href="#">subcoisa2</a></li>
-                <li><a href="#">subcoisa3</a></li>
-            </ul>
-            <li><a href="#">sair</a></li>
-        </ul>
-    </nav>
+    <img id="img-arvore" class="img-fundo" src="assets/arvore.png">
+    <img id="img-salinha" class="img-fundo" src="assets/salinha.png">
+    <img id="img-grupo-icons" class="img-fundo" src="assets/grupo-icons.png">
+    <img id="img-icon-tela" class="img-fundo" src="assets/icon-tela.png">
+    <img id="img-icon-balao" class="img-fundo" src="assets/icon-balao.png">
     <main>
-        <h2 class="titulo">Perfil</h2>
-        <form action="">
+        <h2 class="titulo">Solicitação de Acesso</h2>
+        <form>
             <div class="campo">
                 <label for="razaoSocial">Razão Social *</label>
                 <input type="text" name="razaoSocial" placeholder="Nome da instituição de ensino">
@@ -55,15 +42,19 @@
             </div>
             <div class="campo">
                 <label for="tipoInstituicao">Tipo de Instituição *</label>
-                <input type="text" name="tipoInstituicao" placeholder="">
+                <select class="campo-sel" type="text" name="tipoInstituicao" placeholder="">
+                    <option value>Selecione</option>
+                    <option value="1">Pública</option>
+                    <option value="2">Privada</option>
+                </select>
             </div>
             <div class="campo">
                 <label for="nomeContato">Nome do Contato *</label>
-                <input type="text" name="nomeContato" placeholder="">
+                <input type="text" name="nomeContato" placeholder="Nome Contato">
             </div>
             <div class="campo">
                 <label for="cargoContato">Cargo do Contato *</label>
-                <input type="text" name="cargoContato" placeholder="">
+                <input type="text" name="cargoContato" placeholder="Cargo Contato">
             </div>
             <div class="campo medio">
                 <label for="telefone">Telefone *</label>
@@ -71,17 +62,20 @@
             </div>
             <div class="campo pequeno">
                 <label for="ramal">Ramal *</label>
-                <input type="text" name="ramal" placeholder="___">
+                <input type="text" name="ramal" placeholder="____">
             </div>
             <div class="campo">
                 <label for="email">E-mail *</label>
                 <input type="email" name="email" placeholder="E-mail de contato">
             </div>
-            <div class="campo medio">
+            <div class="campo">
                 <label for="senha">Senha de Acesso *</label>
                 <input type="password" name="senha" placeholder="*****">
             </div>
-            <button class="pequeno">ALTERAR SENHA</button>
+            <div class="campo">
+                <label for="senha">Confirmar Senha *</label>
+                <input type="password" name="senha" placeholder="*****">
+            </div>
             <button type="submit">CONFIRMAR</button>
         </form>
     </main>
