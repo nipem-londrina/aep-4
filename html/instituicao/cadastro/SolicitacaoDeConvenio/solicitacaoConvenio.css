@@ -1,5 +1,5 @@
 .campo1{
-    height: 750px;
+    height: 800px;
     width: 361px;
     left: 7px;
     top: 89px;
@@ -9,11 +9,12 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     margin: 0 auto;
+    
 }
 
 .campoUpload1{
     height: 42px;
-    width: 360px;
+    width: 100%;
     background: #e4e3e3;
     mix-blend-mode: normal;
     border-radius: 4px 4px 0px 0px;
@@ -44,8 +45,8 @@
 .aviso{
     background: rgba(81, 168, 205, 0.23);
     border-radius: 4px;
-    height: 89px;
-    width: 330px;
+    height: auto;
+    width: 93%;
     text-align: left;
     padding: 4px;
     margin: 3% 2% 2% 2%;
@@ -263,12 +264,34 @@
 /* responsividade para computadores */
 @media only screen and (min-width: 426px) {
 
-    .campo1, .campo2, .campo3{
+    .campo1{
         width: calc(80% - 400px);
-
+        height: auto;
     }
 
+    .aviso{
+        height: auto;  
+    }
+
+    .btnSair{
+        min-width: 60px;
+        max-width: 70px;
+    }
+ 
+    .campo2, .campo3{
+        width: 95%;
+        height: auto;
+        
+    }
     
+    .btnEscolher, .btnEnviar{
+        width: auto;
+    }
+ 
+    .p4{
+        margin-bottom: 1%;
+    }
+   
 
     
 
