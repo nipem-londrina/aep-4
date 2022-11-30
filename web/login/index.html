@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="login.css">
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-</head>
+    </head>
 
-<body>
-    <main>
-        <form class="login" method="POST" action="">
-            <h1>Login</h1>
-            <input type="email" name="email" id="email" placeholder="Email"><br><br>
-            <input type="password" name="senha" id="senha" placeholder="Senha"><br><br>
-            <button id="entra" onclick="$('#email,#senha').val('')">
-                ENTRAR
-            </button><br><br>
-            <a href="#"><em>Esqueceu a senha?</em></a>
-            <br><br>
-            <p>Vamos iniciar nossa parceria?</p>
-            <button id="cadastre" onclick="$('#email,#senha').val('')">
-                Cadastrar instituição de ensino?</button>
-        </form>
-    </main>
-</body>
+    <body>
+        <main>
+            <form class="login" method="POST" action="output.jsp">
+                <h1>Login</h1>
+                <select name="type" id="type">
+                    <option value="aluno">Aluno</option>
+                    <option value="supervisor">Supervisor</option>
+                    <option value="coordenador">Coordenador</option>
+                    <option value="instituicao">Instituição</option>
+                    <option value="autarquia">Autarquia</option>
+                </select>
+                <input type="text" name="login" id="login" placeholder="Login"><br><br>
+                <input type="password" name="password" id="password" placeholder="Senha"><br><br>
+                <button id="entra">
+                    ENTRAR
+                </button><br><br>
+                <a href="#"><em>Esqueceu a senha?</em></a>
+                <br><br>
+                <p>Vamos iniciar nossa parceria?</p>
+                <button id="cadastre" onclick="$('#login,#senha').val('')">
+                    Cadastrar instituição de ensino?</button>
+            </form>
+        </main>
+    </body>
 
 </html>
