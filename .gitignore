@@ -15,7 +15,7 @@
 *.war
 *.nar
 *.ear
-*.zip
+#*.zip
 *.tar.gz
 *.rar
 
@@ -42,6 +42,3 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
-
-# eu não consigo ignorar esse cara de jeito nenhum socorro
-nbproject/private/private.properties
