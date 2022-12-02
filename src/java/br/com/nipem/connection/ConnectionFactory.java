@@ -12,9 +12,9 @@ import java.util.logging.Logger;
 public class ConnectionFactory {
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://db-autobot.c8g7b1rpw7ei.us-east-1.rds.amazonaws.com:3306/nipem";
+    private static final String URL = "jdbc:mysql://db-autobot-nipem.c8g7b1rpw7ei.us-east-1.rds.amazonaws.com:3306/nipem";
     private static final String USER = "admin";
-    private static final String PASS = "12345678";
+    private static final String PASS = "Ufn#izSZ4hE%Rx";
 
     public static Connection getConnection() {
         try {
