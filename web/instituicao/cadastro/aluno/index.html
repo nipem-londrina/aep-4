@@ -34,26 +34,30 @@
     </nav>
     <main id="main">
         <h2 class="titulo">Cadastrar Novo Aluno</h2>
-        <form class="form">
+        <form class="form" method="POST" action="output.jsp">
             <div class="campo">
                 <label for="razaoSocial">Nome Completo *</label>
-                <input type="text" name="" placeholder="Nome Completo">
+                <input type="text" name="nome" placeholder="Nome Completo">
             </div><br>
             <div class="campo">
+                <label for="cpf">CPF *</label>
+                <input type="text" name="cpf" placeholder="000.000.000-00">
+            </div>
+            <div class="campo">
                 <label for="nomeContato">Curso *</label>
-                <input type="text" name="" placeholder="Curso designado">
+                <input type="text" name="curso" placeholder="Curso designado">
             </div>
             <div class="campo medio">
                 <label for="telefone">Telefone *</label>
-                <input type="telphone" name="telefone" placeholder="(__) _____-____">
+                <input type="tel" name="telefone" placeholder="(__) _____-____">
             </div>
             <div class="campo pequeno">
                 <label for="ramal">Ramal</label>
-                <input type="number" name="" placeholder="____">
+                <input type="number" name="ramal" placeholder="____">
             </div>
             <div class="campo">
                 <label for="email">E-mail *</label>
-                <input type="email" name="" placeholder="E-mail de contato">
+                <input type="email" name="email" placeholder="E-mail de contato">
             </div>
             <div class="campo">
                 <label for="senha">Senha de Acesso *</label>
@@ -61,11 +65,11 @@
             </div><br>
             <div class="campo">
                 <label for="senha">Confirmar Senha *</label>
-                <input type="password" name="senha" placeholder="*****">
+                <input type="password" name="senhaConfirmar" placeholder="*****">
             </div><br>
             <div class="campo">
                 <label for="senha">Supervisor de Estagio</label>
-                <input type="email" name="" placeholder="carlosandrade@unicesumar.com">
+                <input type="email" name="emailSupervisor" placeholder="carlosandrade@unicesumar.com">
             </div>
             <button class="btn-confirmar" type="submit">CONFIRMAR</button>
         </form>
