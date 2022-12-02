@@ -5,6 +5,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class LoginBean {
 
@@ -54,7 +56,7 @@ public class LoginBean {
         return pa.hash(this.getPassword());
     }
      */
-    public String authenticate() {
+    public boolean authenticate() {
         Connection con = ConnectionFactory.getConnection();
         PreparedStatement stmt = null;
         ResultSet rs = null;
@@ -69,11 +71,11 @@ public class LoginBean {
 
             if (rs.next()) {
                 token = rs.getString(1);
-                return (pa.authenticate(password, token) ? "Senha certa!" : "Senha errada...") + "\n" + token + "\n" + password;
+                return pa.authenticate(password, token);
             }
-            return "Não encontrado.";
         } catch (SQLException ex) {
-            return "Erro:" + ex.getMessage();
+            Logger.getLogger(LoginBean.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return false;
     }
 }

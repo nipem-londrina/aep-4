@@ -24,6 +24,7 @@
                 </select>
                 <input type="text" name="login" id="login" placeholder="Login"><br><br>
                 <input type="password" name="password" id="password" placeholder="Senha"><br><br>
+                <%= session.getAttribute("loginbemsucedido") == null ? "" : session.getAttribute("loginbemsucedido")%><br>
                 <button id="entra">
                     ENTRAR
                 </button><br><br>
