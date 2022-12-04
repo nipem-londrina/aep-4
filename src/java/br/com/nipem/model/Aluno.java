@@ -1,5 +1,6 @@
 package br.com.nipem.model;
 
+import br.com.nipem.security.PasswordAuthentication;
 import java.util.Date;
 
 public class Aluno {
@@ -15,7 +16,7 @@ public class Aluno {
     private Date dataTermino;
     private String periodo;
     private String senha;
-    private String senhaConfirmar;
+    private String token;
 
 
     public int getIdAluno() {
@@ -113,7 +114,19 @@ public class Aluno {
 
 
     public void setSenhaConfirmar(String senhaConfirmar) {
-        this.senhaConfirmar = senhaConfirmar;
+        if (senha.equals(senhaConfirmar)) {
+            PasswordAuthentication pa = new PasswordAuthentication();
+            this.setToken(pa.hash(senha));
+        } else {
+            this.senha = null;
+        }
     }
-            
+
+    public String getToken() {
+        return token;
+    }    
+    
+    public void setToken(String token) {
+        this.token = token;
+    }
 }

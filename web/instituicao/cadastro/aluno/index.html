@@ -36,7 +36,7 @@
         <h2 class="titulo">Cadastrar Novo Aluno</h2>
         <form class="form" method="POST" action="output.jsp">
             <div class="campo">
-                <label for="razaoSocial">Nome Completo *</label>
+                <label for="nome">Nome Completo *</label>
                 <input type="text" name="nome" placeholder="Nome Completo">
             </div><br>
             <div class="campo">
@@ -44,7 +44,7 @@
                 <input type="text" name="cpf" placeholder="000.000.000-00">
             </div>
             <div class="campo">
-                <label for="nomeContato">Curso *</label>
+                <label for="curso">Curso *</label>
                 <input type="text" name="curso" placeholder="Curso designado">
             </div>
             <div class="campo medio">
@@ -64,12 +64,16 @@
                 <input type="password" name="senha" placeholder="*****">
             </div><br>
             <div class="campo">
-                <label for="senha">Confirmar Senha *</label>
+                <label for="senhaConfirmar">Confirmar Senha *</label>
                 <input type="password" name="senhaConfirmar" placeholder="*****">
             </div><br>
             <div class="campo">
-                <label for="senha">Supervisor de Estagio</label>
+                <label for="emailSupervisor">Supervisor de Estagio</label>
                 <input type="email" name="emailSupervisor" placeholder="carlosandrade@unicesumar.com">
+            </div><br>
+            <div class="campo">
+                <label for="periodo">Período</label>
+                <input type="text" name="periodo" placeholder="Noturno">
             </div>
             <button class="btn-confirmar" type="submit">CONFIRMAR</button>
         </form>
