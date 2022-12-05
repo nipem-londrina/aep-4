@@ -1,9 +1,6 @@
-
 package br.com.nipem.model;
-/**
- * @author Mateus
- */
-    import br.com.nipem.security.PasswordAuthentication;
+
+import br.com.nipem.security.PasswordAuthentication;
 
 public class CoordenadorCurso {
     private int idCoordenadorCurso;

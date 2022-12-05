@@ -1,30 +1,20 @@
-
 package br.com.nipem.dao;
-
-/**
- * @author Mateus
- */
 
 import br.com.nipem.connection.ConnectionFactory;
 import br.com.nipem.model.CoordenadorCurso;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 
 public class CoordenadorCursoDAO {
     Connection con;
+    
     public CoordenadorCursoDAO() {
         con = ConnectionFactory.getConnection();
     }
     
     public void cadastrar(CoordenadorCurso coordenadorcurso) {
-        
         PreparedStatement stmt = null;
-        ResultSet rs = null;
         String sql = "INSERT INTO CoordenadorCurso(Nome,Cpf,Curso,Telefone,Ramal,Email,Token) VALUES(?, ?, ?, ?, ?, ?, ?)";
         
         try {
@@ -38,11 +28,9 @@ public class CoordenadorCursoDAO {
             stmt.setString(7, coordenadorcurso.getToken());
             stmt.execute();
             stmt.close();
-            
-            
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(CoordenadorCursoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                        
+        } catch (SQLException u) {
+            throw new RuntimeException(u);
         }
     }
 }

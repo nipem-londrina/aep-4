@@ -44,14 +44,14 @@
     </nav>
     <main>
         <h2 class="titulo">Perfil</h2>
-        <form action="">
+        <form method="POST" action="output.jsp">
             <div class="campo">
                 <label for="nomeContato">Nome Completo *</label>
-                <input type="text" name="" placeholder="" >
+                <input type="text" name="nome" placeholder="" >
             </div>
             <div class="campo">
                 <label for="cargoContato">Curso *</label>
-                <input type="text" name="" placeholder="">
+                <input type="text" name="curso" placeholder="">
             </div>
             <div class="campo medio">
                 <label for="telefone">Telefone *</label>
@@ -70,7 +70,7 @@
                 <input type="password" name="senha" placeholder="*****">
             </div>
             <button class="pequeno">ALTERAR SENHA</button>
-            <button type="submit">CONFIRMAR</button>
+            
         </form>
     </main>
 </body>

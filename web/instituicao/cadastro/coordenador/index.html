@@ -44,7 +44,7 @@
     </nav>
     <main id="main">
         <h2 class="titulo">Cadastrar Novo Coordenador</h2>
-        <form class="form">
+        <form class="form" method="POST" action="output.jsp">
             <div class="campo">
                 <label for="razaoSocial">Nome Completo *</label>
                 <input type="text" name="nome" placeholder="Nome Completo">
@@ -77,7 +77,7 @@
             </div><br>
             <div class="campo">
                 <label for="senha">Confirmar Senha *</label>
-                <input type="password" name="senhaconfirmar" placeholder="*****">
+                <input type="password" name="senhaConfirmar" placeholder="*****">
             </div>
             <button class="btn-confirmar" type="submit">CONFIRMAR</button>
         </form>
