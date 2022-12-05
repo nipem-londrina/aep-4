@@ -5,5 +5,5 @@
 <%
     CoordenadorCursoDAO dao = new CoordenadorCursoDAO();
     dao.cadastrar(obj);
-    //response.sendRedirect("."); 
+    response.sendRedirect("."); 
 %>
