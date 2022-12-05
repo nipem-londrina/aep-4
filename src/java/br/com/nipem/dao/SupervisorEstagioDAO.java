@@ -15,19 +15,31 @@ public class SupervisorEstagioDAO {
         con = ConnectionFactory.getConnection();
     }
     
-    public SupervisorEstagio getSupervisorEstagio() {
-        SupervisorEstagio supervisorestagio = null;
+    public void cadastrar(SupervisorEstagio supervisorestagio) {
         
         PreparedStatement stmt = null;
         ResultSet rs = null;
-        String sql = "select * from ";
+        String sql = "INSERT INTO SupervisorEstagio(Nome,Cpf,Curso,Telefone,Ramal,Email,Token) VALUES(?, ?, ?, ?, ?, ?, ?)";
         
         try {
             stmt = con.prepareStatement(sql);
+            stmt.setString(1, supervisorestagio.getNome());
+            stmt.setString(2, supervisorestagio.getCpf());
+            stmt.setString(3, supervisorestagio.getCurso());
+            stmt.setString(4, supervisorestagio.getTelefone());
+            stmt.setString(5, supervisorestagio.getRamal());
+            stmt.setString(6, supervisorestagio.getEmail());
+            stmt.setString(7, supervisorestagio.getToken());
+            stmt.execute();
+            stmt.close();
+            
+            
+            
         } catch (SQLException ex) {
             Logger.getLogger(SupervisorEstagioDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        return supervisorestagio;
+        
+     
     }
 }
