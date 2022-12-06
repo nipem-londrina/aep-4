@@ -1,3 +1,4 @@
+<%@page import="br.com.nipem.security.LoginBean"%>
 <nav id='menu' class="">
     <ul class="menu-lista">
         <!--
@@ -11,6 +12,20 @@
             <li><a href="#">subcoisa3</a></li>
         </ul>
         -->
-        <li><a href="/logout.jsp">Sair</a></li>
+        <%
+            LoginBean login = (LoginBean)session.getAttribute("login");
+            String type = login.getType();
+            switch (type) {
+                case "InstituicaoDeEnsino":
+                    %>
+                        <li><a href="/aep-4/instituicao/perfil">Perfil</a></li>    
+                        <li><a href="/aep-4/instituicao/cadastro/aluno">Alunos</a></li>
+                        <li><a href="/aep-4/instituicao/cadastro/coordenador">Coordenadores</a></li>
+                        <li><a href="/aep-4/instituicao/cadastro/supervisor">Supervisores</a></li>
+                    <%
+                    break;
+            }
+        %>
+        <li><a href="/aep-4/logout.jsp">Sair</a></li>
     </ul>
 </nav>
