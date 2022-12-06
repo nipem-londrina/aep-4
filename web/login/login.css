@@ -18,13 +18,17 @@ main {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-input {
+.input {
     width: calc(100% - 16px);
     padding: 0.5em;
     border-radius: 5px;
     border-color: #CCC;
     border-width: 2px;
     border-style: solid;
+}
+
+select.input {
+    width: 100%;
 }
 
 button {

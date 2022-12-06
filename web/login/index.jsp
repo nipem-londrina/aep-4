@@ -39,15 +39,15 @@
         <main>
             <form class="login" method="POST" action="output.jsp">
                 <h1>Login</h1>
-                <select name="type" id="type">
+                <select class="input" name="type" id="type">
                     <option value="Aluno">Aluno</option>
                     <option value="SupervisorEstagio">Supervisor</option>
                     <option value="CoordenadorCurso">Coordenador</option>
                     <option value="InstituicaoDeEnsino">Instituição</option>
                     <option value="Autarquia">Autarquia</option>
-                </select>
-                <input type="text" name="login" id="login" placeholder="Login"><br><br>
-                <input type="password" name="password" id="password" placeholder="Senha"><br><br>
+                </select><br><br>
+                <input class="input" type="text" name="login" id="login" placeholder="Login"><br><br>
+                <input class="input" type="password" name="password" id="password" placeholder="Senha"><br><br>
                 <%= session.getAttribute("loginbemsucedido") == null ? "" : session.getAttribute("loginbemsucedido")%><br>
                 <button id="entra">
                     ENTRAR
