@@ -18,6 +18,7 @@
             switch (type) {
                 case "InstituicaoDeEnsino":
                     %>
+                        <li><a href="/aep-4/instituicao/perfil">Perfil</a></li>    
                         <li><a href="/aep-4/instituicao/cadastro/aluno">Alunos</a></li>
                         <li><a href="/aep-4/instituicao/cadastro/coordenador">Coordenadores</a></li>
                         <li><a href="/aep-4/instituicao/cadastro/supervisor">Supervisores</a></li>
