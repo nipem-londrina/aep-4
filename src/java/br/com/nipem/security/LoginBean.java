@@ -10,14 +10,7 @@ import java.util.logging.Logger;
 
 public class LoginBean {
 
-    public static final int ALUNO = 0;
-    public static final int SUPERVISOR = 1;
-    public static final int COORDENADOR = 2;
-    public static final int INSTITUICAO = 3;
-    public static final int AUTARQUIA = 4;
-    
-    private String login, password;
-    private int type;
+    private String login, type, password;
     PasswordAuthentication pa;
 
     public LoginBean() {
@@ -40,42 +33,21 @@ public class LoginBean {
         this.password = password;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
     public void setType(String typeI) {
         switch (typeI) {
             case "Aluno":
-                this.type = ALUNO;
             case "SupervisorEstagio":
-                this.type = SUPERVISOR;
             case "CoordenadorCurso":
-                this.type = COORDENADOR;
             case "InstituicaoDeEnsino":
-                this.type = INSTITUICAO;
             case "Autarquia":
-                this.type = AUTARQUIA;
+                this.type = typeI;
                 break;
             default:
                 throw new AssertionError();
-        }
-    }
-    
-    public String getTypeAsString() {
-        switch (type) {
-            case ALUNO:
-                return "Aluno";
-            case SUPERVISOR:
-                return "SupervisorEstagio";
-            case COORDENADOR:
-                return "CoordenadorCurso";
-            case INSTITUICAO:
-                return "InstituicaoDeEnsino";
-            case AUTARQUIA:
-                return "Autarquia";
-            default:
-                return null;
         }
     }
 
@@ -88,7 +60,7 @@ public class LoginBean {
         Connection con = ConnectionFactory.getConnection();
         PreparedStatement stmt = null;
         ResultSet rs = null;
-        String type = this.getTypeAsString();
+        String type = this.getType();
         String cpfoucnpj = type.equals("InstituicaoDeEnsino") || type.equals("Autarquia") ? "Cnpj" : "Cpf";
         String sql = "select token from " + type + " where " + cpfoucnpj + " = ?";
 

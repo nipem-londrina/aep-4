@@ -47,7 +47,6 @@ public class CoordenadorCursoDAO {
             stmt.setString(1, cpf);
 
             rs = stmt.executeQuery();
-            stmt.close();
 
             if (rs.next()) {
                 coordenador.setCpf(rs.getString("Cpf"));
@@ -59,6 +58,7 @@ public class CoordenadorCursoDAO {
                 coordenador.setToken(rs.getString("Token"));
             }
 
+            stmt.close();
             return coordenador;
         } catch (SQLException u) {
             throw new RuntimeException(u);
