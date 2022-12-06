@@ -16,12 +16,17 @@
             LoginBean login = (LoginBean)session.getAttribute("login");
             String type = login.getType();
             switch (type) {
+                case "CoordenadorCurso":
+                    %>
+                        <li><a href="/aep-4/coordenador">Perfil</a></li>    
+                        <li><a href="/aep-4/coordenador/cadastro/aluno">Alunos</a></li>
+                        <li><a href="/aep-4/coordenador/cadastro/supervisor">Supervisores</a></li>
+                    <%
+                    break;
                 case "InstituicaoDeEnsino":
                     %>
                         <li><a href="/aep-4/instituicao/perfil">Perfil</a></li>    
-                        <li><a href="/aep-4/instituicao/cadastro/aluno">Alunos</a></li>
                         <li><a href="/aep-4/instituicao/cadastro/coordenador">Coordenadores</a></li>
-                        <li><a href="/aep-4/instituicao/cadastro/supervisor">Supervisores</a></li>
                     <%
                     break;
             }

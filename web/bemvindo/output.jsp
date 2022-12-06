@@ -5,6 +5,6 @@
 <%
     InstituicaoDeEnsinoDAO dao = new InstituicaoDeEnsinoDAO();
     dao.cadastrar(obj);
-    response.sendRedirect(".");
+    response.sendRedirect("/aep-4/");
 %>
 
