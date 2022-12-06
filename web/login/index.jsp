@@ -31,8 +31,8 @@
                 <a href="#"><em>Esqueceu a senha?</em></a>
                 <br><br>
                 <p>Vamos iniciar nossa parceria?</p>
-                <button id="cadastre" onclick="$('#login,#senha').val('')">
-                    Cadastrar instituição de ensino?</button>
+                <button id="cadastre" onclick="location.href = '/aep-4/'">
+                    Cadastrar instituição de ensino</button>
             </form>
         </main>
     </body>

@@ -88,7 +88,9 @@ public class LoginBean {
         Connection con = ConnectionFactory.getConnection();
         PreparedStatement stmt = null;
         ResultSet rs = null;
-        String sql = "select token from " + this.getTypeAsString() + " where Cpf = ?";
+        String type = this.getTypeAsString();
+        String cpfoucnpj = type.equals("InstituicaoDeEnsino") || type.equals("Autarquia") ? "Cnpj" : "Cpf";
+        String sql = "select token from " + type + " where " + cpfoucnpj + " = ?";
 
         String token;
 
