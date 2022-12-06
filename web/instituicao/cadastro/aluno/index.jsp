@@ -1,3 +1,4 @@
+<%= session.getAttribute("cpfvalido") != null ? session.getAttribute("cpfvalido") : ""%>
 <%@include file="/assets/head.jsp" %>
 <body>
     <header>
