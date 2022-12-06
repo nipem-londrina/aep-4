@@ -9,6 +9,30 @@
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <!-- jQuery Mask -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+                integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Aplicar máscaras -->
+        <script>
+            $(document).ready(function () {
+                $("#login").mask('000.000.000-00');
+                $("#type").change(function () {
+                    addMaskToInput();
+                });
+            });
+            
+            function addMaskToInput() {
+                var selecionado = $('#type option:selected').val();
+                if (selecionado === "Aluno" || selecionado === "CoordenadorCurso" || selecionado === "SupervisorEstagio") {
+                    $("#login").mask('000.000.000-00');
+                } else {
+                    $("#login").mask('00.000.000/0000-00');
+                }
+                $("#login").val('');
+                $("#password").val('');
+            }
+        </script>
     </head>
 
     <body>
@@ -36,5 +60,4 @@
             </form>
         </main>
     </body>
-
 </html>
