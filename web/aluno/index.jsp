@@ -1,3 +1,4 @@
+<a href="/aep-4/logout.jsp">Sair</a><br>
 TODO bem vindo a tela de aluno ebaaa<br>
 <%@page import="br.com.nipem.security.LoginBean"%>
 <%@page import="br.com.nipem.model.Aluno"%>

@@ -19,7 +19,7 @@
                     <option value="Aluno">Aluno</option>
                     <option value="SupervisorEstagio">Supervisor</option>
                     <option value="CoordenadorCurso">Coordenador</option>
-                    <option value="InstituicaoDeEnsino">InstituiÃ§Ã£o</option>
+                    <option value="InstituicaoDeEnsino">Instituição</option>
                     <option value="Autarquia">Autarquia</option>
                 </select>
                 <input type="text" name="login" id="login" placeholder="Login"><br><br>
@@ -32,7 +32,7 @@
                 <br><br>
                 <p>Vamos iniciar nossa parceria?</p>
                 <button id="cadastre" onclick="$('#login,#senha').val('')">
-                    Cadastrar instituiÃ§Ã£o de ensino?</button>
+                    Cadastrar instituição de ensino?</button>
             </form>
         </main>
     </body>
