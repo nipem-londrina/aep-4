@@ -1,15 +1,11 @@
 <a href="/aep-4/logout.jsp">Sair</a><br>
 TODO bem vindo a tela de aluno ebaaa<br>
-<%@page import="br.com.nipem.security.LoginBean"%>
 <%@page import="br.com.nipem.model.Aluno"%>
-<%@page import="br.com.nipem.dao.AlunoDAO"%>
 <%
-    LoginBean login = (LoginBean) session.getAttribute("login");
-    AlunoDAO dao = new AlunoDAO();
-    Aluno aluno = dao.getAluno(login.getLogin());
-    out.print(aluno.getNome() + "\n");
-    out.print(aluno.getCpf() + "\n");
-    out.print(aluno.getCurso() + "\n");
-    out.print(aluno.getTelefone() + "\n");
+    Aluno usuario = (Aluno) session.getAttribute("usuario");
+    out.print(usuario.getNome() + "\n");
+    out.print(usuario.getCpf() + "\n");
+    out.print(usuario.getCurso() + "\n");
+    out.print(usuario.getTelefone() + "\n");
 %>
-<h1><%= aluno.getNome() %></h1>
+<h1><%= usuario.getNome() %></h1>

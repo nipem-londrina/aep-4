@@ -1,4 +1,12 @@
 <%@page import="br.com.nipem.security.PasswordAuthentication"%>
+<%@page import="br.com.nipem.dao.AlunoDAO"%>
+<%@page import="br.com.nipem.dao.CoordenadorCursoDAO"%>
+<%@page import="br.com.nipem.dao.SupervisorEstagioDAO"%>
+<%@page import="br.com.nipem.dao.InstituicaoDeEnsinoDAO"%>
+<%@page import="br.com.nipem.model.Aluno"%>
+<%@page import="br.com.nipem.model.CoordenadorCurso"%>
+<%@page import="br.com.nipem.model.SupervisorEstagio"%>
+<%@page import="br.com.nipem.model.InstituicaoDeEnsino"%>
 <jsp:useBean id="obj" class="br.com.nipem.security.LoginBean"/>
 <jsp:setProperty name="obj" property="*"/>
 <jsp:getProperty name="obj" property="type"/><br>
@@ -11,15 +19,19 @@
         session.setAttribute("login", obj);
         switch (obj.getType()) {
             case "Aluno":
+                session.setAttribute("usuario", new AlunoDAO().getAluno(obj.getLogin()));
                 url = "/aep-4/aluno/";
                 break;
             case "SupervisorEstagio":
+                session.setAttribute("usuario", new SupervisorEstagioDAO().getSupervisorEstagio(obj.getLogin()));
                 url = "/aep-4/supervisor/";
                 break;
             case "CoordenadorCurso":
+                session.setAttribute("usuario", new CoordenadorCursoDAO().getCoordenadorCurso(obj.getLogin()));
                 url = "/aep-4/coordenador/";
                 break;
             case "InstituicaoDeEnsino":
+                session.setAttribute("usuario", new InstituicaoDeEnsinoDAO().getInstituicaoDeEnsino(obj.getLogin()));
                 url = "/aep-4/instituicao/";
                 break;
             case "Autarquia":
