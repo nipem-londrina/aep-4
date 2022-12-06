@@ -1,5 +1,5 @@
 <%@include file="/assets/head.jsp" %>
-
+<link rel="stylesheet" href="instituicao.css"/>
 <body>
     <header>
         <img class="invert" src="/aep-4/assets/icons/menu.png" id="menu-botao" onclick="abrirMenu()">

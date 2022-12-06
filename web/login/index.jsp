@@ -21,7 +21,7 @@
                     addMaskToInput();
                 });
             });
-            
+
             function addMaskToInput() {
                 var selecionado = $('#type option:selected').val();
                 if (selecionado === "Aluno" || selecionado === "CoordenadorCurso" || selecionado === "SupervisorEstagio") {
@@ -52,12 +52,12 @@
                 <button id="entra">
                     ENTRAR
                 </button><br><br>
-                <a href="#"><em>Esqueceu a senha?</em></a>
-                <br><br>
-                <p>Vamos iniciar nossa parceria?</p>
-                <button id="cadastre" onclick="location.href = '/aep-4/'">
-                    Cadastrar instituição de ensino</button>
+            <a href="#"><em>Esqueceu a senha?</em></a>
+            <br><br>
+            <p>Vamos iniciar nossa parceria?</p>
             </form>
+            <button id="cadastre" onclick="location.href = '/aep-4/bemvindo/index.html'">
+                Cadastrar instituição de ensino</button>
         </main>
     </body>
 </html>
