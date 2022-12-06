@@ -10,17 +10,17 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class SupervisorEstagioDAO {
+
     Connection con;
+
     public SupervisorEstagioDAO() {
         con = ConnectionFactory.getConnection();
     }
-    
+
     public void cadastrar(SupervisorEstagio supervisorestagio) {
-        
         PreparedStatement stmt = null;
-        ResultSet rs = null;
         String sql = "INSERT INTO SupervisorEstagio(Nome,Cpf,Curso,Telefone,Ramal,Email,Token) VALUES(?, ?, ?, ?, ?, ?, ?)";
-        
+
         try {
             stmt = con.prepareStatement(sql);
             stmt.setString(1, supervisorestagio.getNome());
@@ -32,14 +32,14 @@ public class SupervisorEstagioDAO {
             stmt.setString(7, supervisorestagio.getToken());
             stmt.execute();
             stmt.close();
-            
-            
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(SupervisorEstagioDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-     
+    }
+
+    public SupervisorEstagio getSupervisorEstagio(String cpf) {
+        // TODO implement
+        return null;
     }
 }

@@ -1,4 +1,3 @@
-<%@page import="br.com.nipem.security.PasswordAuthentication"%>
 <%@page import="br.com.nipem.dao.AlunoDAO"%>
 <%@page import="br.com.nipem.dao.CoordenadorCursoDAO"%>
 <%@page import="br.com.nipem.dao.SupervisorEstagioDAO"%>
@@ -10,35 +9,28 @@
 <jsp:useBean id="obj" class="br.com.nipem.security.LoginBean"/>
 <jsp:setProperty name="obj" property="*"/>
 <%
-    out.print(obj.getType());
-    out.print(obj.getLogin());
-    out.print(obj.getPassword());
-    
-    
     String url = null;
     if (obj.authenticate()) {
         session.setAttribute("loginbemsucedido", "");
         session.setAttribute("login", obj);
         switch (obj.getType()) {
-            case "Aluno":
+            case 0:
                 session.setAttribute("usuario", new AlunoDAO().getAluno(obj.getLogin()));
                 url = "/aep-4/aluno/";
                 break;
-                /*
-            case "SupervisorEstagio":
+            case 1:
                 session.setAttribute("usuario", new SupervisorEstagioDAO().getSupervisorEstagio(obj.getLogin()));
                 url = "/aep-4/supervisor/";
                 break;
-                */
-            case "CoordenadorCurso":
+            case 2:
                 session.setAttribute("usuario", new CoordenadorCursoDAO().getCoordenadorCurso(obj.getLogin()));
                 url = "/aep-4/coordenador/";
                 break;
-            case "InstituicaoDeEnsino":
+            case 3:
                 session.setAttribute("usuario", new InstituicaoDeEnsinoDAO().getInstituicaoDeEnsino(obj.getLogin()));
                 url = "/aep-4/instituicao/";
                 break;
-            case "Autarquia":
+            case 4:
                 url = "/aep-4/autarquia/";
                 break;
             default:
