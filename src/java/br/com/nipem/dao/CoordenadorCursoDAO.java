@@ -36,7 +36,7 @@ public class CoordenadorCursoDAO {
         }
     }
 
-    public CoordenadorCurso pesquisar(String cpf) throws SQLException {
+    public CoordenadorCurso getCoordenadorCurso(String cpf) throws SQLException {
         CoordenadorCurso coordenador = new CoordenadorCurso();
         String sql = "SELECT * FROM CoordenadorCurso where cpf = ?";
 
@@ -52,10 +52,10 @@ public class CoordenadorCursoDAO {
                         coordenador.setCpf(rs.getString("Cpf"));
                         coordenador.setNome(rs.getString("Nome"));
                         coordenador.setCurso(rs.getString("Curso"));
-                        coordenador.setCurso(rs.getString("Telefone"));
-                        coordenador.setCurso(rs.getString("Ramal"));
-                        coordenador.setCurso(rs.getString("Email"));
-                        coordenador.setCurso(rs.getString("Token"));
+                        coordenador.setTelefone(rs.getString("Telefone"));
+                        coordenador.setRamal(rs.getString("Ramal"));
+                        coordenador.setEmail(rs.getString("Email"));
+                        coordenador.setToken(rs.getString("Token"));
                     }
 
                 }

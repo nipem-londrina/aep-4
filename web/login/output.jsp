@@ -8,10 +8,10 @@
     String url;
     if (obj.authenticate()) {
         session.setAttribute("loginbemsucedido", "");
+        session.setAttribute("login", obj);
         switch (obj.getType()) {
             case "Aluno":
                 url = "/aep-4/aluno/";
-                session.setAttribute("loginho", obj.getLogin());
                 break;
             case "SupervisorEstagio":
                 url = "/aep-4/supervisor/";
