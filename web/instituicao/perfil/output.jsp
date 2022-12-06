@@ -3,8 +3,9 @@
 <jsp:setProperty name="obj" property="*"/>
 
 <%
+    String cnpj = request.getParameter("Cnpj");
     InstituicaoDeEnsinoDAO dao = new InstituicaoDeEnsinoDAO();
-    dao.cadastrar(obj);
+    instituicao.setCnpj(cnpj);
+    dao.alterarToken(obj);
     response.sendRedirect(".");
 %>
-

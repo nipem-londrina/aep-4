@@ -2,7 +2,7 @@ package br.com.nipem.model;
 
 import br.com.nipem.security.PasswordAuthentication;
 
-public class Instituicao {
+public class InstituicaoDeEnsino {
 
     private String razaoSocial;
     private String cnpj;

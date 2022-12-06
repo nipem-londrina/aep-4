@@ -9,11 +9,13 @@
 <%@page import="br.com.nipem.model.InstituicaoDeEnsino"%>
 <jsp:useBean id="obj" class="br.com.nipem.security.LoginBean"/>
 <jsp:setProperty name="obj" property="*"/>
-<jsp:getProperty name="obj" property="type"/><br>
-<jsp:getProperty name="obj" property="login"/><br>
-<jsp:getProperty name="obj" property="password"/><br>
 <%
-    String url;
+    out.print(obj.getType());
+    out.print(obj.getLogin());
+    out.print(obj.getPassword());
+    
+    
+    String url = null;
     if (obj.authenticate()) {
         session.setAttribute("loginbemsucedido", "");
         session.setAttribute("login", obj);
@@ -22,10 +24,12 @@
                 session.setAttribute("usuario", new AlunoDAO().getAluno(obj.getLogin()));
                 url = "/aep-4/aluno/";
                 break;
+                /*
             case "SupervisorEstagio":
                 session.setAttribute("usuario", new SupervisorEstagioDAO().getSupervisorEstagio(obj.getLogin()));
                 url = "/aep-4/supervisor/";
                 break;
+                */
             case "CoordenadorCurso":
                 session.setAttribute("usuario", new CoordenadorCursoDAO().getCoordenadorCurso(obj.getLogin()));
                 url = "/aep-4/coordenador/";

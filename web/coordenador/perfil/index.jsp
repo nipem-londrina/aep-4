@@ -14,7 +14,7 @@
         <img class="invert" src="/aep-4/assets/icons/menu.png" id="menu-botao" onclick="abrirMenu()">
         Nipem
     </header>
-    <%@include file="assets/nav.jsp" %>
+    <%@include file="/assets/nav.jsp" %>
     <main>
         <h2 class="titulo">Perfil</h2>
         <div class="campo">
