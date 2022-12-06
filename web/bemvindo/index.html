@@ -31,7 +31,7 @@
     <img id="img-icon-balao" class="img-fundo" src="assets/icon-balao.png">
     <main>
         <h2 class="titulo">Solicitação de Acesso</h2>
-        <form>
+        <form method="POST" action="output.jsp">
             <div class="campo">
                 <label for="razaoSocial">Razão Social *</label>
                 <input type="text" name="razaoSocial" placeholder="Nome da instituição de ensino">
@@ -42,10 +42,10 @@
             </div>
             <div class="campo">
                 <label for="tipoInstituicao">Tipo de Instituição *</label>
-                <select class="campo-sel" type="text" name="tipoInstituicao" placeholder="">
+                <select class="campo-sel" name="tipo">
                     <option value>Selecione</option>
-                    <option value="1">Pública</option>
-                    <option value="2">Privada</option>
+                    <option value="Pública">Pública</option>
+                    <option value="Privada">Privada</option>
                 </select>
             </div>
             <div class="campo">
@@ -54,7 +54,7 @@
             </div>
             <div class="campo">
                 <label for="cargoContato">Cargo do Contato *</label>
-                <input type="text" name="cargoContato" placeholder="Cargo Contato">
+                <input type="text" name="cargoContato" placeholder="">
             </div>
             <div class="campo medio">
                 <label for="telefone">Telefone *</label>
@@ -74,7 +74,7 @@
             </div>
             <div class="campo">
                 <label for="senha">Confirmar Senha *</label>
-                <input type="password" name="senha" placeholder="*****">
+                <input type="password" name="senhaConfirmar" placeholder="*****">
             </div>
             <button type="submit">CONFIRMAR</button>
         </form>
