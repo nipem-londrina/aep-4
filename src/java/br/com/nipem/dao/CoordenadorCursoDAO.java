@@ -38,29 +38,27 @@ public class CoordenadorCursoDAO {
 
     public CoordenadorCurso getCoordenadorCurso(String cpf) throws SQLException {
         CoordenadorCurso coordenador = new CoordenadorCurso();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
         String sql = "SELECT * FROM CoordenadorCurso where cpf = ?";
 
         try {
+            stmt = this.con.prepareStatement(sql);
+            stmt.setString(1, cpf);
 
-            try ( PreparedStatement stmt = this.con.prepareStatement(sql)) {
+            rs = stmt.executeQuery();
+            stmt.close();
 
-                stmt.setString(1, cpf);
-
-                try ( ResultSet rs = stmt.executeQuery()) {
-
-                    if (rs.next()) {
-                        coordenador.setCpf(rs.getString("Cpf"));
-                        coordenador.setNome(rs.getString("Nome"));
-                        coordenador.setCurso(rs.getString("Curso"));
-                        coordenador.setTelefone(rs.getString("Telefone"));
-                        coordenador.setRamal(rs.getString("Ramal"));
-                        coordenador.setEmail(rs.getString("Email"));
-                        coordenador.setToken(rs.getString("Token"));
-                    }
-
-                }
-                stmt.close();
+            if (rs.next()) {
+                coordenador.setCpf(rs.getString("Cpf"));
+                coordenador.setNome(rs.getString("Nome"));
+                coordenador.setCurso(rs.getString("Curso"));
+                coordenador.setTelefone(rs.getString("Telefone"));
+                coordenador.setRamal(rs.getString("Ramal"));
+                coordenador.setEmail(rs.getString("Email"));
+                coordenador.setToken(rs.getString("Token"));
             }
+
             return coordenador;
         } catch (SQLException u) {
             throw new RuntimeException(u);

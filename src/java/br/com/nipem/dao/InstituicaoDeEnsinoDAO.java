@@ -8,15 +8,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class InstituicaoDeEnsinoDAO {
-    
+
     Connection con;
 
     public InstituicaoDeEnsinoDAO() {
         con = ConnectionFactory.getConnection();
     }
-    
-    public void cadastrar(InstituicaoDeEnsino instituicao){
-        
+
+    public void cadastrar(InstituicaoDeEnsino instituicao) {
+
         PreparedStatement stmt = null;
         String sql = "INSERT INTO InstituicaoDeEnsino(RazaoSocial,Cnpj,TipoDeInstituicao,NomeContato,CargoContato,Telefone,Ramal,Email,Token) VALUES( ?,  ?,  ?,  ?, ?, ?, ?, ?, ?)";
         try {
@@ -35,35 +35,33 @@ public class InstituicaoDeEnsinoDAO {
         } catch (SQLException u) {
             throw new RuntimeException(u);
         }
-    }  
-    
+    }
+
     public InstituicaoDeEnsino getInstituicaoDeEnsino(String cnpj) throws SQLException {
         InstituicaoDeEnsino instituicao = new InstituicaoDeEnsino();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
         String sql = "SELECT * FROM InstituicaoDeEnsino where cnpj = ?";
 
         try {
+            stmt = this.con.prepareStatement(sql);
+            stmt.setString(1, cnpj);
 
-            try ( PreparedStatement stmt = this.con.prepareStatement(sql)) {
+            rs = stmt.executeQuery();
+            stmt.close();
 
-                stmt.setString(1, cnpj);
-
-                try ( ResultSet rs = stmt.executeQuery()) {
-
-                    if (rs.next()) {
-                        instituicao.setRazaoSocial(rs.getString("RazaoSocial"));
-                        instituicao.setCnpj(rs.getString("Cnpj"));
-                        instituicao.setTipo(rs.getString("TipoDeInstituicao"));
-                        instituicao.setNomeContato(rs.getString("NomeContato"));
-                        instituicao.setCargoContato(rs.getString("CargoContato"));
-                        instituicao.setTelefone(rs.getString("Telefone"));
-                        instituicao.setRamal(rs.getString("Ramal"));
-                        instituicao.setEmail(rs.getString("Email"));
-                        instituicao.setToken(rs.getString("Token"));
-                    }
-
-                }
-                stmt.close();
+            if (rs.next()) {
+                instituicao.setRazaoSocial(rs.getString("RazaoSocial"));
+                instituicao.setCnpj(rs.getString("Cnpj"));
+                instituicao.setTipo(rs.getString("TipoDeInstituicao"));
+                instituicao.setNomeContato(rs.getString("NomeContato"));
+                instituicao.setCargoContato(rs.getString("CargoContato"));
+                instituicao.setTelefone(rs.getString("Telefone"));
+                instituicao.setRamal(rs.getString("Ramal"));
+                instituicao.setEmail(rs.getString("Email"));
+                instituicao.setToken(rs.getString("Token"));
             }
+            
             return instituicao;
         } catch (SQLException u) {
             throw new RuntimeException(u);

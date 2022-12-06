@@ -39,7 +39,32 @@ public class SupervisorEstagioDAO {
     }
 
     public SupervisorEstagio getSupervisorEstagio(String cpf) {
-        // TODO implement
-        return null;
+        SupervisorEstagio supervisor = new SupervisorEstagio();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        String sql = "select * from SupervisorEstagio where cpf = ?";
+        
+        try {
+            stmt = con.prepareStatement(sql);
+            stmt.setString(1, cpf);
+            
+            rs = stmt.executeQuery();
+            stmt.close();
+            
+            if (rs.next()) {
+                supervisor.setCpf(cpf);
+                supervisor.setCurso(rs.getString("Curso"));
+                supervisor.setEmail(rs.getString("Email"));
+                supervisor.setIdSupervisor(rs.getInt("IdSupervisor"));
+                supervisor.setNome(rs.getString("Nome"));
+                supervisor.setRamal(rs.getString("Ramal"));
+                supervisor.setTelefone(rs.getString("Telefone"));
+                supervisor.setToken(rs.getString("Token"));
+            }
+            
+            return supervisor;
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 }
