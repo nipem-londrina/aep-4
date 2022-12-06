@@ -24,12 +24,10 @@
                 session.setAttribute("usuario", new AlunoDAO().getAluno(obj.getLogin()));
                 url = "/aep-4/aluno/";
                 break;
-                /*
             case "SupervisorEstagio":
                 session.setAttribute("usuario", new SupervisorEstagioDAO().getSupervisorEstagio(obj.getLogin()));
                 url = "/aep-4/supervisor/";
                 break;
-                */
             case "CoordenadorCurso":
                 session.setAttribute("usuario", new CoordenadorCursoDAO().getCoordenadorCurso(obj.getLogin()));
                 url = "/aep-4/coordenador/";

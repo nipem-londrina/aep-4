@@ -48,7 +48,6 @@ public class InstituicaoDeEnsinoDAO {
             stmt.setString(1, cnpj);
 
             rs = stmt.executeQuery();
-            stmt.close();
 
             if (rs.next()) {
                 instituicao.setRazaoSocial(rs.getString("RazaoSocial"));
@@ -62,6 +61,7 @@ public class InstituicaoDeEnsinoDAO {
                 instituicao.setToken(rs.getString("Token"));
             }
             
+            stmt.close();
             return instituicao;
         } catch (SQLException u) {
             throw new RuntimeException(u);

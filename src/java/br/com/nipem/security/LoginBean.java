@@ -60,7 +60,7 @@ public class LoginBean {
         Connection con = ConnectionFactory.getConnection();
         PreparedStatement stmt = null;
         ResultSet rs = null;
-        String type = this.getTypeAsString();
+        String type = this.getType();
         String cpfoucnpj = type.equals("InstituicaoDeEnsino") || type.equals("Autarquia") ? "Cnpj" : "Cpf";
         String sql = "select token from " + type + " where " + cpfoucnpj + " = ?";
 

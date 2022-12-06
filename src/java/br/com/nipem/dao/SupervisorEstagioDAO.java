@@ -51,7 +51,6 @@ public class SupervisorEstagioDAO {
             stmt.setString(1, cpf);
             
             rs = stmt.executeQuery();
-            stmt.close();
             
             if (rs.next()) {
                 supervisor.setCpf(cpf);
@@ -64,6 +63,7 @@ public class SupervisorEstagioDAO {
                 supervisor.setToken(rs.getString("Token"));
             }
             
+            stmt.close();
             return supervisor;
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
