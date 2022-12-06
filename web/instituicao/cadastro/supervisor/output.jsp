@@ -8,7 +8,7 @@
         session.setAttribute("cpfvalido", "<script>window.alert('CPF inválido, tente novamente.');</script>");
         response.sendRedirect(".");
     }else{
-    session.setAttribute("cpfvalido", "")
+    session.setAttribute("cpfvalido", "");
     SupervisorEstagioDAO dao = new SupervisorEstagioDAO();
     dao.cadastrar(obj);
     response.sendRedirect(".");
